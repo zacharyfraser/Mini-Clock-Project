@@ -41,6 +41,7 @@ while(True):
     current_time_seconds = utime.mktime(current_time_UTC) - 3*3600 # type: ignore
     current_time_tuple = utime.localtime(current_time_seconds)
     current_time = time_format.format(current_time_tuple[3], current_time_tuple[4])
+    oled.fill(0)
     oled.text(current_time, 12, 20, 1)
     oled.show()
     utime.sleep(1)
